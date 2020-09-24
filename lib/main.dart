@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart';
+import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
 import 'package:tutorial_flutter/multiple_page_connection/page_one.dart';
 // import 'package:tutorial_flutter/input_field/template_input_field.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BootstrapExample(),
+      home: PushWArg(),
     );
   }
 }
