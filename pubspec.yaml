@@ -21,9 +21,6 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  device_preview: ^0.4.8
-  flutter_bootstrap: ^1.0.1
-  flutter_speed_dial: ^1.2.5
   flutter:
     sdk: flutter
 
@@ -31,6 +28,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+
+  # additional added dependencies
+  device_preview: ^0.4.8
+  flutter_bootstrap: ^1.0.1
+  flutter_speed_dial: ^1.2.5
 
 dev_dependencies:
   flutter_test:

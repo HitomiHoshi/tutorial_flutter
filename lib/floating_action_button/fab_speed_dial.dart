@@ -57,8 +57,8 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
         SpeedDialChild(
           child: Icon(Icons.accessibility, color: Colors.white),
           backgroundColor: Colors.deepOrange,
-          onTap: () => print('FIRST CHILD'),
-          label: 'First Child',
+          onTap: () => print(Theme.of(context).platform.toString()),
+          label: 'Current platform',
           labelStyle: TextStyle(fontWeight: FontWeight.w500),
           labelBackgroundColor: Colors.deepOrangeAccent,
         ),
