@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart';
-import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
-import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
-import 'package:tutorial_flutter/multiple_page_connection/page_one.dart';
-// import 'package:tutorial_flutter/input_field/template_input_field.dart';
+import 'package:tutorial_flutter/floating_action_button/fab_speed_dial.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PushWArg(),
+      home: FabSpeedDial(),
     );
   }
 }
