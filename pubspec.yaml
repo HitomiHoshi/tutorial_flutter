@@ -33,6 +33,9 @@ dependencies:
   device_preview: ^0.4.8
   flutter_bootstrap: ^1.0.1
   flutter_speed_dial: ^1.2.5
+  path_provider: ^1.6.18
+  barcode_scan: ^3.0.1
+  qr_flutter: ^3.2.0
 
 dev_dependencies:
   flutter_test:
