@@ -150,6 +150,25 @@ class _TutorialMenu extends State<TutorialMenu> {
               },
             ),
           ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Barcode Code Scan',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/barcode-scan-page');
+              },
+            ),
+          ),
         ],
       ),
     );

@@ -5,7 +5,8 @@ import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
 import 'package:tutorial_flutter/floating_action_button/fab_speed_dial.dart';
 import 'package:tutorial_flutter/input_field/template_input_field.dart';
 import 'package:tutorial_flutter/multiple_page_connection/page_one.dart';
-import 'package:tutorial_flutter/qrcode/qrcode_home_screen.dart';
+import 'package:tutorial_flutter/qrcode_example/barcode_scan/barcode_scan.dart';
+import 'package:tutorial_flutter/qrcode_example/qrcode_home_screen.dart';
 import 'package:tutorial_flutter/tutorial_menu.dart';
 
 void main() {
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/push-with-argument-page': (BuildContext context) => new PushWArg(),
         '/push-name-with-argument-page': (BuildContext context) => new PushNamedWArg(),
         '/qrcode-page': (BuildContext context) => new QrcodeHomeScreen(),
+        '/barcode-scan-page': (BuildContext context) => new BarcodeScan(),
       },
       home: TutorialMenu(),
     );

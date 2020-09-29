@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:tutorial_flutter/qrcode/qrcode_generate_Screen.dart';
-import 'package:tutorial_flutter/qrcode/qrcode_scan_screen.dart';
+import 'package:tutorial_flutter/qrcode_example/qrcode_generate_Screen.dart';
+import 'package:tutorial_flutter/qrcode_example/qrcode_scan_screen.dart';
 
 class QrcodeHomeScreen extends StatelessWidget {
 
