@@ -96,7 +96,7 @@ class _BarcodeScan extends State<BarcodeScan> {
       ListTile(
         title: TextField(
           decoration: InputDecoration(
-            hasFloatingPlaceholder: true,
+            // hasFloatingPlaceholder: true,
             labelText: "Flash On",
           ),
           controller: _flashOnController,
@@ -105,7 +105,7 @@ class _BarcodeScan extends State<BarcodeScan> {
       ListTile(
         title: TextField(
           decoration: InputDecoration(
-            hasFloatingPlaceholder: true,
+            // hasFloatingPlaceholder: true,
             labelText: "Flash Off",
           ),
           controller: _flashOffController,
@@ -114,7 +114,7 @@ class _BarcodeScan extends State<BarcodeScan> {
       ListTile(
         title: TextField(
           decoration: InputDecoration(
-            hasFloatingPlaceholder: true,
+            // hasFloatingPlaceholder: true,
             labelText: "Cancel",
           ),
           controller: _cancelController,

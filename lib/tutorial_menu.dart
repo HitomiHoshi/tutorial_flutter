@@ -188,6 +188,44 @@ class _TutorialMenu extends State<TutorialMenu> {
               },
             ),
           ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Multiselect Formfield',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/multiselect-formfield-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Open Camera',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/open-camera-page');
+              },
+            ),
+          ),
         ],
       ),
     );
