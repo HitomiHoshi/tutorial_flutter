@@ -1,0 +1,17 @@
+[
+    {
+        "description": "User 1 disarm all",
+        "time": "14:59:59",
+        "date": "2020-09-19"
+    },
+    {
+        "description": "User 2 arm all",
+        "time": "14:59:59",
+        "date": "2020-09-19"
+    },
+    {
+        "description": "Controller down",
+        "time": "14:59:59",
+        "date": "2020-09-19"
+    }
+]

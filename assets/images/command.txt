@@ -1,0 +1,9 @@
+checking current device available : 
+- flutter devices
+
+run :
+- normal run : flutter run 
+- run for specific device : flutter run -d <device-id>
+
+symbolic link window :
+- mklink /d C:\LinkToFolder C:\Users\Name\OriginalFolder

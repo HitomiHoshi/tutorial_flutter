@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart';
 import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
+import 'package:tutorial_flutter/http_request/get_http_request.dart';
 import 'package:tutorial_flutter/image_picker/open_camera.dart';
 import 'package:tutorial_flutter/input_field/multiselect_formfield_example.dart';
+import 'package:tutorial_flutter/json_reader/json_reder_from_local.dart';
 import 'package:tutorial_flutter/launcher_device/launcher_device_function.dart';
 import 'package:tutorial_flutter/floating_action_button/fab_speed_dial.dart';
 import 'package:tutorial_flutter/input_field/template_input_field.dart';
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
         '/direct-launch-page': (BuildContext context) => new DirectLaunch(),
         '/multiselect-formfield-page': (BuildContext context) => new MultiSelectFormFieldaxample(),
         '/open-camera-page': (BuildContext context) => new OpenCamera(),
+        '/get-json-page': (BuildContext context) => new JsonReader(),
+        '/get-http-page': (BuildContext context) => new GetHttpRequest(),
       },
       home: TutorialMenu(),
     );

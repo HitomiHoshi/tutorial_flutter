@@ -40,6 +40,7 @@ dependencies:
   multiselect_formfield: ^0.1.4
   image_picker: ^0.6.7+11
   video_player: ^0.11.0
+  http: ^0.12.2
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - images/
+    - json/
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
