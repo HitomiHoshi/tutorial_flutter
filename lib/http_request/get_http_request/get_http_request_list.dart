@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:tutorial_flutter/http_request/get_http_request_PODO.dart';
+import 'package:tutorial_flutter/http_request/get_http_request/get_http_request_PODO.dart';
 
 class GetHttpRequestList extends StatefulWidget {
-  final List<GetHttpRequestRespondsPODO> logs;
+  final List<Response> logs;
   GetHttpRequestList({Key key, this.logs}) : super(key: key);
 
   @override
@@ -25,7 +25,7 @@ class _GetHttpRequestList extends State<GetHttpRequestList> {
               child: Row(
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Text(widget.logs[index].status.toString()),
+                  Text(widget.logs[index].fullName.toString()),
                   // Text(widget.logs[index].response[0].fullName)
                 ],
               ),

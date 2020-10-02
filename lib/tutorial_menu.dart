@@ -264,6 +264,44 @@ class _TutorialMenu extends State<TutorialMenu> {
               },
             ),
           ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Get Http One Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/get-http-one-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Post Http One Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/post-http-one-page');
+              },
+            ),
+          ),
         ],
       ),
     );

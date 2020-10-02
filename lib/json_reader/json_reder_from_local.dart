@@ -43,7 +43,7 @@ class _JsonReader extends State<JsonReader> {
             future: DefaultAssetBundle.of(context)
                 .loadString('json/log_list_data.json'),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
-              print('snapshot: '+ snapshot.toString());
+              // print('snapshot: '+ snapshot.toString());
               if (snapshot.connectionState == ConnectionState.done) {
                 if (snapshot.hasData) {
                   List<JsonReaderPODO> allLog = parseJson(
