@@ -9,33 +9,35 @@ Future<Album> fetchAlbum() async {
       await http.get('https://jsonplaceholder.typicode.com/albums/1');
 
   if (response.statusCode == 200) {
-    // If the server did return a 200 OK response, then parse the JSON.
+    // If the server did return a 200 OK response,
+    // then parse the JSON.
     return Album.fromJson(json.decode(response.body));
   } else {
-    // If the server did not return a 200 OK response, then throw an exception.
+    // If the server did not return a 200 OK response,
+    // then throw an exception.
     throw Exception('Failed to load album');
   }
 }
 
-Future<Album> deleteAlbum(String id) async {
-  final http.Response response = await http.delete(
-    'https://jsonplaceholder.typicode.com/albums/$id',
+Future<Album> updateAlbum(String title) async {
+  final http.Response response = await http.put(
+    'https://jsonplaceholder.typicode.com/albums/1',
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
+    body: jsonEncode(<String, String>{
+      'title': title,
+    }),
   );
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
-    // then parse the JSON. After deleting,
-    // you'll get an empty JSON `{}` response.
-    // Don't return `null`, otherwise `snapshot.hasData`
-    // will always return false on `FutureBuilder`.
-    return Album.fromJson(jsonDecode(response.body));
+    // then parse the JSON.
+    return Album.fromJson(json.decode(response.body));
   } else {
-    // If the server did not return a "200 OK response",
+    // If the server did not return a 200 OK response,
     // then throw an exception.
-    throw Exception('Failed to delete album.');
+    throw Exception('Failed to update album.');
   }
 }
 
@@ -53,15 +55,16 @@ class Album {
   }
 }
 
-class DeleteHttpOnePages extends StatefulWidget {
-  DeleteHttpOnePages({Key key}) : super(key: key);
+class PutHttpOnePages extends StatefulWidget {
+  PutHttpOnePages({Key key}) : super(key: key);
 
   @override
-  _DeleteHttpOnePages createState() => _DeleteHttpOnePages();
+  _PutHttpOnePages createState() => _PutHttpOnePages();
 }
 
-class _DeleteHttpOnePages extends State<DeleteHttpOnePages> {
+class _PutHttpOnePages extends State<PutHttpOnePages> {
 
+  final TextEditingController _controller = TextEditingController();
   Future<Album> _futureAlbum;
 
   @override
@@ -72,34 +75,36 @@ class _DeleteHttpOnePages extends State<DeleteHttpOnePages> {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'Delete Data Example',
+      title: 'Update Data Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Delete Data Example'),
+          title: Text('Update Data Example'),
         ),
-        body: Center(
+        body: Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.all(8.0),
           child: FutureBuilder<Album>(
             future: _futureAlbum,
             builder: (context, snapshot) {
-              // If the connection is done,
-              // check for response data or an error.
               if (snapshot.connectionState == ConnectionState.done) {
                 if (snapshot.hasData) {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('${snapshot.data?.title ?? 'Deleted'}'),
+                      Text(snapshot.data.title),
+                      TextField(
+                        controller: _controller,
+                        decoration: InputDecoration(hintText: 'Enter Title'),
+                      ),
                       RaisedButton(
-                        child: Text('Delete Data'),
+                        child: Text('Update Data'),
                         onPressed: () {
                           setState(() {
-                            _futureAlbum =
-                                deleteAlbum(snapshot.data.id.toString());
+                            _futureAlbum = updateAlbum(_controller.text);
                           });
                         },
                       ),
@@ -110,13 +115,11 @@ class _DeleteHttpOnePages extends State<DeleteHttpOnePages> {
                 }
               }
 
-              // By default, show a loading spinner.
               return CircularProgressIndicator();
             },
           ),
         ),
       ),
     );
-    
   }
 }

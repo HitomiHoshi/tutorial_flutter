@@ -302,6 +302,62 @@ class _TutorialMenu extends State<TutorialMenu> {
               },
             ),
           ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Delete Http One Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/delete-http-one-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Edit Http One Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/put-http-one-page');
+              },
+            ),
+          ),Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Bluetooth Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/bluetooth-page');
+              },
+            ),
+          ),
         ],
       ),
     );

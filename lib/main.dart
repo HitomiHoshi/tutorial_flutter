@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart';
 import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
+import 'package:tutorial_flutter/bluetooth/flutter_blue_example.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
+import 'package:tutorial_flutter/http_request/delete_http_request/delete_http_request_one_page.dart';
 import 'package:tutorial_flutter/http_request/get_http_request/get_http_request.dart';
 import 'package:tutorial_flutter/http_request/get_http_request/get_http_request_one_page.dart';
 import 'package:tutorial_flutter/http_request/post_http_request/post_http_request_one_page.dart';
+import 'package:tutorial_flutter/http_request/put_http_request/put_http_request_one_page.dart';
 import 'package:tutorial_flutter/image_picker/open_camera.dart';
 import 'package:tutorial_flutter/input_field/multiselect_formfield_example.dart';
 import 'package:tutorial_flutter/json_reader/json_reder_from_local.dart';
@@ -46,6 +49,9 @@ class MyApp extends StatelessWidget {
         '/get-http-page': (BuildContext context) => new GetHttpRequest(),
         '/get-http-one-page': (BuildContext context) => new GetHttpOnePages(),
         '/post-http-one-page': (BuildContext context) => new PostHttpOnePages(),
+        '/delete-http-one-page': (BuildContext context) => new DeleteHttpOnePages(),
+        '/put-http-one-page': (BuildContext context) => new PutHttpOnePages(),
+        '/bluetooth-page': (BuildContext context) => new FlutterBlueApp(),
       },
       home: TutorialMenu(),
     );
