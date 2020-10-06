@@ -339,7 +339,8 @@ class _TutorialMenu extends State<TutorialMenu> {
                 Navigator.pushNamed(context, '/put-http-one-page');
               },
             ),
-          ),Card(
+          ),
+          Card(
             child: FlatButton(
               child: Container(
                 padding: const EdgeInsets.all(12),
@@ -355,6 +356,82 @@ class _TutorialMenu extends State<TutorialMenu> {
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/bluetooth-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Device Info Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/device-info-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Multi Page Form Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/multi-page-form-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Form with validation Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/form-w-validate-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Save Shared Preference Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/save-sharedpref-page');
               },
             ),
           ),

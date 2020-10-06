@@ -3,6 +3,8 @@ import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart
 import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
 import 'package:tutorial_flutter/bluetooth/flutter_blue_example.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
+import 'package:tutorial_flutter/device_info/get_all_device_info.dart';
+import 'package:tutorial_flutter/form_with_validation/form_with_validation_example.dart';
 import 'package:tutorial_flutter/http_request/delete_http_request/delete_http_request_one_page.dart';
 import 'package:tutorial_flutter/http_request/get_http_request/get_http_request.dart';
 import 'package:tutorial_flutter/http_request/get_http_request/get_http_request_one_page.dart';
@@ -14,9 +16,11 @@ import 'package:tutorial_flutter/json_reader/json_reder_from_local.dart';
 import 'package:tutorial_flutter/launcher_device/launcher_device_function.dart';
 import 'package:tutorial_flutter/floating_action_button/fab_speed_dial.dart';
 import 'package:tutorial_flutter/input_field/template_input_field.dart';
+import 'package:tutorial_flutter/multi_page_form/multi_page_form.dart';
 import 'package:tutorial_flutter/multiple_page_connection/page_one.dart';
 import 'package:tutorial_flutter/qrcode_example/barcode_scan/barcode_scan.dart';
 import 'package:tutorial_flutter/qrcode_example/qrcode_home_screen.dart';
+import 'package:tutorial_flutter/shared_preference/shared_preference_in_device.dart';
 import 'package:tutorial_flutter/tutorial_menu.dart';
 
 void main() {
@@ -52,6 +56,10 @@ class MyApp extends StatelessWidget {
         '/delete-http-one-page': (BuildContext context) => new DeleteHttpOnePages(),
         '/put-http-one-page': (BuildContext context) => new PutHttpOnePages(),
         '/bluetooth-page': (BuildContext context) => new FlutterBlueApp(),
+        '/device-info-page': (BuildContext context) => new AllDeviceInfo(),
+        '/multi-page-form-page': (BuildContext context) => new Test(),
+        '/form-w-validate-page': (BuildContext context) => new FormWValidate(),
+        '/save-sharedpref-page': (BuildContext context) => new Demo(),
       },
       home: TutorialMenu(),
     );
