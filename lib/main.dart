@@ -4,6 +4,7 @@ import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
 import 'package:tutorial_flutter/bluetooth/flutter_blue_example.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
 import 'package:tutorial_flutter/device_info/get_all_device_info.dart';
+import 'package:tutorial_flutter/dialog/simple_dialog.dart';
 import 'package:tutorial_flutter/form_with_validation/form_with_validation_example.dart';
 import 'package:tutorial_flutter/http_request/delete_http_request/delete_http_request_one_page.dart';
 import 'package:tutorial_flutter/http_request/get_http_request/get_http_request.dart';
@@ -18,6 +19,7 @@ import 'package:tutorial_flutter/floating_action_button/fab_speed_dial.dart';
 import 'package:tutorial_flutter/input_field/template_input_field.dart';
 import 'package:tutorial_flutter/multi_page_form/multi_page_form.dart';
 import 'package:tutorial_flutter/multiple_page_connection/page_one.dart';
+import 'package:tutorial_flutter/permission_handler/permission_handler.dart';
 import 'package:tutorial_flutter/qrcode_example/barcode_scan/barcode_scan.dart';
 import 'package:tutorial_flutter/qrcode_example/qrcode_home_screen.dart';
 import 'package:tutorial_flutter/shared_preference/shared_preference_in_device.dart';
@@ -60,6 +62,8 @@ class MyApp extends StatelessWidget {
         '/multi-page-form-page': (BuildContext context) => new Test(),
         '/form-w-validate-page': (BuildContext context) => new FormWValidate(),
         '/save-sharedpref-page': (BuildContext context) => new Demo(),
+        '/simple-dialog-page': (BuildContext context) => new SimpleDialogs(),
+        '/permission-handler-page': (BuildContext context) => new PermissionHandler(),
       },
       home: TutorialMenu(),
     );

@@ -3,9 +3,37 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_blue/flutter_blue.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:tutorial_flutter/bluetooth/bluetooth_widget.dart';
 
-class FlutterBlueApp extends StatelessWidget {
+class FlutterBlueApp extends StatefulWidget {
+  @override
+  _FlutterBlueAppState createState() => _FlutterBlueAppState();
+}
+
+class _FlutterBlueAppState extends State<FlutterBlueApp> {
+  bool location;
+
+  Stream<bool> getLocation() async* {
+    bool enabled;
+    while (true) {
+      try {
+        bool isEnabled = await Geolocator.isLocationServiceEnabled();
+        if (enabled != isEnabled) {
+          enabled = isEnabled;
+          yield enabled;
+        }
+      } catch (error) {}
+      await Future.delayed(Duration(seconds: 5));
+    }
+  }
+
+  @override
+  void initState() {
+    getLocation();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,13 +44,48 @@ class FlutterBlueApp extends StatelessWidget {
           builder: (c, snapshot) {
             final state = snapshot.data;
             if (state == BluetoothState.on) {
-              return FindDevicesScreen();
+              return StreamBuilder<bool>(
+                  stream: getLocation(),
+                  initialData: false,
+                  builder: (c, snapshot) {
+                    final state = snapshot.data;
+                    if (state) {
+                      return FindDevicesScreen();
+                    }
+                    return Text('Location off');
+                  });
+              // if(location)
+              // return FindDevicesScreen();
+              // else
+              // return Text('Location off');
             }
             return BluetoothOffScreen(state: state);
           }),
     );
   }
 }
+
+// class FlutterBlueApp extends StatelessWidget {
+//   bool location;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       color: Colors.lightBlue,
+//       home: StreamBuilder<BluetoothState>(
+//           stream: FlutterBlue.instance.state,
+//           initialData: BluetoothState.unknown,
+//           builder: (c, snapshot) {
+//             final state = snapshot.data;
+//             if (state == BluetoothState.on) {
+//               if(location)
+//               return FindDevicesScreen();
+//             }
+//             return BluetoothOffScreen(state: state);
+//           }),
+//     );
+//   }
+// }
 
 class BluetoothOffScreen extends StatelessWidget {
   const BluetoothOffScreen({Key key, this.state}) : super(key: key);
