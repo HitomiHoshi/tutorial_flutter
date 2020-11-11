@@ -453,7 +453,8 @@ class _TutorialMenu extends State<TutorialMenu> {
                 Navigator.pushNamed(context, '/simple-dialog-page');
               },
             ),
-          ),Card(
+          ),
+          Card(
             child: FlatButton(
               child: Container(
                 padding: const EdgeInsets.all(12),
@@ -469,6 +470,44 @@ class _TutorialMenu extends State<TutorialMenu> {
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/permission-handler-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Date Filter Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/date-filter-page');
+              },
+            ),
+          ),
+          Card(
+            child: FlatButton(
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                child: Center(
+                  child: Text(
+                        'Date Time Picker Page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/date-time-picker-page');
               },
             ),
           ),

@@ -3,6 +3,8 @@ import 'package:tutorial_flutter/Navigation_w_argument/pushNamed_w_argument.dart
 import 'package:tutorial_flutter/Navigation_w_argument/push_w_argument.dart';
 import 'package:tutorial_flutter/bluetooth/flutter_blue_example.dart';
 import 'package:tutorial_flutter/bootstrap/bootstrap_example.dart';
+import 'package:tutorial_flutter/date_fillter/date_filter.dart';
+import 'package:tutorial_flutter/date_picker/date_picker.dart';
 import 'package:tutorial_flutter/device_info/get_all_device_info.dart';
 import 'package:tutorial_flutter/dialog/simple_dialog.dart';
 import 'package:tutorial_flutter/form_with_validation/form_with_validation_example.dart';
@@ -64,6 +66,8 @@ class MyApp extends StatelessWidget {
         '/save-sharedpref-page': (BuildContext context) => new Demo(),
         '/simple-dialog-page': (BuildContext context) => new SimpleDialogs(),
         '/permission-handler-page': (BuildContext context) => new PermissionHandler(),
+        '/date-filter-page': (BuildContext context) => new DateFilter(),
+        '/date-time-picker-page': (BuildContext context) => new DateTimePickerPage(),
       },
       home: TutorialMenu(),
     );
